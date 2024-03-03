@@ -12,10 +12,11 @@ namespace OA.API.Controllers
     public class UserController : ControllerBase
     {
         private IUserService _userService;
-        public UserController(IUserService userService, ILogger logger)
+        private ILogger _logger;
+        public UserController(IUserService userService)
         {
             _userService = userService;
-            _logger = logger;  
+  
         }
 
         [HttpPost("/Add")]
